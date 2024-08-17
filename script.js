@@ -9,6 +9,13 @@ const search = document.querySelector('div#search')
 
 let oldInputValue
 
+let localSave = JSON.parse(localStorage.getItem('active')) || {
+   todo: todo
+}
+
+
+localStorage.setItem('active', JSON.stringify(localSave))
+
 
 // Funções
 const saveTodo = (text) => {
